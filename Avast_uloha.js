@@ -48,6 +48,6 @@ test('1year5pcs', async t => {
     const cartprice = await Selector('.av_streetPrice').textContent;
 
     //Comparing prices
-    await t.expect(parseInt(price.replace(/\s/g,''))).eql(parseInt(cartprice.replace(/\s/g,'')), 'Prices are not equal.');
+    await t.expect(price.replace(/\s/g,'')).eql(cartprice.replace(/\s/g,''), 'Prices are not equal.');
 });	
 		
